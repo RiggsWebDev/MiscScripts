@@ -5,7 +5,7 @@ option = webdriver.ChromeOptions()
 
 browser = webdriver.Chrome(executable_path='C:/chromedriver', options=option)
 
-browser.get("https://docs.google.com/forms/d/e/1FAIpQLSeKcCrTVTHiN2Sgy1inCjFhFl8xhudOWNjdj8ZjsNoUZ1W5lA/viewform")
+browser.get(" GENERIC DAILY RESPONSE FORM - redacted to keep specific forum anonymous")
 
 textboxes = browser.find_elements_by_class_name("quantumWizTextinputPaperinputInput")
 radiobuttons = browser.find_elements_by_class_name("docssharedWizToggleLabeledLabelWrapper")
@@ -14,8 +14,8 @@ submitbutton = browser.find_element_by_class_name("appsMaterialWizButtonPaperbut
 
 radiobuttons[-4].click()
 
-textboxes[0].send_keys("Riggs")
-textboxes[1].send_keys("Hunter")
+textboxes[0].send_keys("Last Name")
+textboxes[1].send_keys("First Name")
 
 radiobuttons[11].click()
 
