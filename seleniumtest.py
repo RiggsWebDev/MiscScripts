@@ -22,7 +22,12 @@ radiobuttons[11].click()
 
 #checkboxes[1].click()
 #checkboxes[3].click()
+"""
 
 #submitbutton[0].click()
 
+for some reason I can't actually get the above to work. It's the correct class. I'm going to have to really dig into inspect element to find out what's happening here. 
+It is nice to have schedled in task manager even without this though, as the form is popped up and filled in automatically, just waiting on my clicking of the submit button. 
+
+"""
 #browser.close()
