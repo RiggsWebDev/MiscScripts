@@ -5,9 +5,12 @@ could easily make for some cool looking front-end stuff
    
 import calendar
    
-yy = int(input("What year is it? : "))
-mm = int(input("What month is it? (numerical values only) : "))
+year = int(input("What year is it? : "))
+month = int(input("What month is it? (numerical values only) : "))
    
-# display the calendar
+"""
+Returned value with formatted calendar look thanks to the calendar import
+"""
+
 print("Here is the monthly calendar you requested!")
-print(calendar.month(yy, mm))
+print(calendar.month(year, month))
