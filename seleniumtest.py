@@ -1,3 +1,12 @@
+#script is now 100% working and can be completely automated - highly recommend setting up with something like Window's task scheduler and using the headless otion
+#if you want this to be 100% hands off automated. Personally I'm still testing some ideas and won't be running that setup just yet. 
+#
+#
+#It should however be extremely easy to change some of these values to fit any Google form that needs to be filled out daily for example. 
+#
+#Instructions on how to do that coming soon. 
+#
+
 from selenium import webdriver
 
 option = webdriver.ChromeOptions()
@@ -22,6 +31,18 @@ radiobuttons[11].click()
 
 #checkboxes[1].click()
 #checkboxes[3].click()
+
+# click on submit button ---- The top one works, just remove the comments to run it. Not sure why the second variant that I was attempting to use first didn't work. 
+"""
+
+This actually works
+
+submit = browser.find_element_by_xpath(
+    '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div/div/span/span')
+submit.click()
+
+"""
+
 """
 
 #submitbutton[0].click()
