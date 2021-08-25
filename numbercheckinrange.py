@@ -23,7 +23,16 @@ elif x >= 2001:
 else:
     quit()
 
+#Added a Windows/DOS only wait key
+#Maybe not the most user-friendly or Pythonic way of doing it...
+#but curiousity got the better of me, if it could be done. 
 
+import msvcrt as m
+
+def wait():
+    m.getch()
+
+wait()
 
 """
 
