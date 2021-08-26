@@ -2,7 +2,7 @@ Import-Module ActiveDirectory
 ##########################################
 #                                        #
 #                                        #
-#        Do not uncomment line 8 and 9   #
+#        Do not uncomment line 9 and 10  #
 #           they are for testing only    #
 #                                        #
 ##########################################
