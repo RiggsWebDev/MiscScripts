@@ -37,7 +37,7 @@ radiobuttons[11].click()
 # click on submit button ---- The top one works, just remove the comments to run it. Not sure why the second variant that I was attempting to use first didn't work. 
 
 
-This actually works
+#This actually works
 
 submit = browser.find_element_by_xpath(
     '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div/div/span/span')
