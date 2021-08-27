@@ -8,7 +8,7 @@
 #
 
 from selenium import webdriver
-
+import time
 option = webdriver.ChromeOptions()
 #option.add_argument("-incognito")
 
@@ -24,7 +24,9 @@ submitbutton = browser.find_element_by_class_name("appsMaterialWizButtonPaperbut
 radiobuttons[-4].click()
 
 textboxes[0].send_keys("Last Name")
+time.sleep(.5)
 textboxes[1].send_keys("First Name")
+time.sleep(.5)
 
 radiobuttons[11].click()
 
@@ -33,7 +35,7 @@ radiobuttons[11].click()
 #checkboxes[3].click()
 
 # click on submit button ---- The top one works, just remove the comments to run it. Not sure why the second variant that I was attempting to use first didn't work. 
-"""
+
 
 This actually works
 
@@ -41,8 +43,8 @@ submit = browser.find_element_by_xpath(
     '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div/div/span/span')
 submit.click()
 
-"""
-
+time.sleep(3)
+browser.close()
 
 
 ############################################################################
@@ -56,4 +58,3 @@ for some reason I can't actually get the above to work. It's the correct class. 
 It is nice to have schedled in task manager even without this though, as the form is popped up and filled in automatically, just waiting on my clicking of the submit button. 
 
 """
-#browser.close()
