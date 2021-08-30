@@ -12,7 +12,6 @@ As simple as it is, it's already had multiple iterations due to design flaws.
 """
 
 import time
-file1 = open("C:/test/User_Dat.txt", "r")
 
 def welcome():
     print ("Welcome to a basic Python login screen!")
@@ -38,10 +37,14 @@ def register():
    username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
    readfile = file1.read()
    if username in readfile: 
+        print('\n\n---------------------------------------') 
         print('The user', username, 'has already been created.')
+        print('---------------------------------------\n\n') 
         welcome()
    else: 
-        print('The user', username, 'has been created!')   
+        print('\n\n---------------------------------------') 
+        print('The user', username, 'has been created!')  
+        print('---------------------------------------\n\n') 
         file1.write(username)
         file1.write("\n")
         file1.close()
@@ -53,11 +56,15 @@ def login():
    username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
    readfile = file1.read()
    if username in readfile: 
+        print('\n\n---------------------------------------') 
         print("Correct credentials!")
         print("You are now logged in!")
+        print('---------------------------------------\n\n') 
         startgame()
    else:
+        print('\n\n---------------------------------------')
         print("Incorrect credentials.")
+        print('---------------------------------------\n\n') 
         time.sleep(2)
         welcome()
 
@@ -70,7 +77,9 @@ def startgame():
     time.sleep(1)
     print("Loading [----------]")
     time.sleep(1)
+    print('\n\n---------------------------------------')
     print("Welcome back",username+"!")
+    print('---------------------------------------\n\n') 
     input("Press Enter to continue...")
     
 welcome()
