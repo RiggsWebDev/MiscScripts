@@ -30,11 +30,10 @@ def welcome():
         print("This is not recognized please try again")
         welcome()
 
-
 def register():
-   file1 = open("C:/test/User_Dat.txt", "r")
+   file1 = open("C:/test/User_Dat.txt", "r+")
    global username
-   username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
+   username = str(input("Please enter a username \n")).lower()
    readfile = file1.read()
    if username in readfile: 
         print('\n\n---------------------------------------') 
@@ -53,7 +52,7 @@ def register():
 def login():
    file1 = open("C:/test/User_Dat.txt", "r")
    global username
-   username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
+   username = str(input("Please enter a username \n")).lower()
    readfile = file1.read()
    if username in readfile: 
         print('\n\n---------------------------------------') 
