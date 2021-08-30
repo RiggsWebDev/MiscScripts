@@ -1,5 +1,3 @@
-import time
-
 """
 
 This is a very simple script that points to a Windows directory and takes a username. 
@@ -8,7 +6,13 @@ but I didn't want a  user inputted password system as it's not secure-
 even though this is just for my own testing I'd still rather not 
 breach that particular area of security practices. 
 
+As simple as it is, it's already had multiple iterations due to design flaws. 
+            I would definitely consider it a work in progress.
+
 """
+
+import time
+file1 = open("C:/test/User_Dat.txt", "r")
 
 def welcome():
     print ("Welcome to a basic Python login screen!")
@@ -27,35 +31,35 @@ def welcome():
         print("This is not recognized please try again")
         welcome()
 
-def register():
-    global username
-    username =  str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower() #just testing .lower functionality here
-    file = open("C:/test/User_Dat.txt","a")
-    for line in open("C:/test/User_Dat.txt","r").readlines(): 
-        login_info = line
-        if username == login_info[0]:
-            print("There is already a user with this name please try again.")
-            register()
-    file.write(username)
-    file.write("\n")
-    file.close()
-    login()
 
+def register():
+   file1 = open("C:/test/User_Dat.txt", "r")
+   global username
+   username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
+   readfile = file1.read()
+   if username in readfile: 
+        print('The user', username, 'has already been created.')
+        welcome()
+   else: 
+        print('The user', username, 'has been created!')   
+        file1.write(username)
+        file1.write("\n")
+        file1.close()
+        login()
+    
 def login():
-    global username
-    username = input("***CASE SENSITIVE***\nPlease enter your username  \n").lower() 
-    for line in open("C:/test/User_Dat.txt","r").readlines(): 
-        login_info = line
-        if username == login_info[0]:
-            print("Correct credentials!")
-            print("You are now logged in!")
-            startgame()
-            return True
-        else:
-            print("Incorrect credentials.")
-            time.sleep(2)
-            welcome()
-            return False
+   file1 = open("C:/test/User_Dat.txt", "r")
+   global username
+   username = str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower()
+   readfile = file1.read()
+   if username in readfile: 
+        print("Correct credentials!")
+        print("You are now logged in!")
+        startgame()
+   else:
+        print("Incorrect credentials.")
+        time.sleep(2)
+        welcome()
 
 def startgame():
     print("Loading [--        ]")
