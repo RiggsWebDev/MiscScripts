@@ -29,7 +29,7 @@ def welcome():
         welcome()
 
 def register():
-    username =  str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower() #It's not actually case sensitive but it's a good habit for the user :)
+    username =  str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower() #It's not actually case sensitive lol
     file = open("C:/test/User_Dat.txt","a")
     for line in open("C:/test/User_Dat.txt","r").readlines(): # Read the lines
         login_info = line.split() # Split on the space, and store the results in a list of two strings
@@ -43,6 +43,7 @@ def register():
     login()
 
 def login():
+    global username
     username = input("***CASE SENSITIVE***\nPlease enter your username  \n").lower() 
     for line in open("C:/test/User_Dat.txt","r").readlines(): # Read the lines
         login_info = line.split() # Split on the space, and store the results in a list of two strings
@@ -65,5 +66,8 @@ def startgame():
     print("Loading [--------  ]")
     time.sleep(1)
     print("Loading [----------]")
+    time.sleep(1)
+    print("Welcome back",username+"!")
+    input("Press Enter to continue...")
     
 welcome()
