@@ -1,5 +1,4 @@
 import time
-import os
 
 """
 
@@ -29,15 +28,15 @@ def welcome():
         welcome()
 
 def register():
-    username =  str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower() #It's not actually case sensitive lol
+    global username
+    username =  str(input("***CASE SENSITIVE***\nPlease enter a username \n")).lower() #just testing .lower functionality here
     file = open("C:/test/User_Dat.txt","a")
-    for line in open("C:/test/User_Dat.txt","r").readlines(): # Read the lines
-        login_info = line.split() # Split on the space, and store the results in a list of two strings
+    for line in open("C:/test/User_Dat.txt","r").readlines(): 
+        login_info = line
         if username == login_info[0]:
             print("There is already a user with this name please try again.")
             register()
     file.write(username)
-    file.write(" ")
     file.write("\n")
     file.close()
     login()
@@ -45,8 +44,8 @@ def register():
 def login():
     global username
     username = input("***CASE SENSITIVE***\nPlease enter your username  \n").lower() 
-    for line in open("C:/test/User_Dat.txt","r").readlines(): # Read the lines
-        login_info = line.split() # Split on the space, and store the results in a list of two strings
+    for line in open("C:/test/User_Dat.txt","r").readlines(): 
+        login_info = line
         if username == login_info[0]:
             print("Correct credentials!")
             print("You are now logged in!")
