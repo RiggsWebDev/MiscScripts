@@ -1,5 +1,8 @@
 """
 
+EDIT: While the tutorial link is below it appears to have been re-used from this Github profile upon further research:
+https://github.com/six519/Python-Notepad
+
 Credit to:
 https://www.geeksforgeeks.org/make-notepad-using-tkinter/
 
