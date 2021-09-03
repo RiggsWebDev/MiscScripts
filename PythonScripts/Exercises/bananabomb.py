@@ -5,8 +5,8 @@ bananabomb = True
 
 try:
     while True:
-        print(' ' * banana, end='')
         print('banana')
+        print(' ' * banana, end='')
         time.sleep(0.025)
 
         if bananabomb == True:
