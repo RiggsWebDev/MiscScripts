@@ -27,7 +27,7 @@ def guess():
     if x > y:
         print("You number is too low!")
         guess()
-    elif ValueError: 
+    elif ValueError: #Trying to fix the game where if the user just enters blank or a word it doesn't break anything... 
         print("Choose a number instead...")
         guess()
     elif x < y:
