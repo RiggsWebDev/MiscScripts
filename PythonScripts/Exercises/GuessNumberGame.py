@@ -27,6 +27,9 @@ def guess():
     if x > y:
         print("You number is too low!")
         guess()
+    elif ValueError: 
+        print("Choose a number instead...")
+        guess()
     elif x < y:
         print("You number is too high")
         guess()
